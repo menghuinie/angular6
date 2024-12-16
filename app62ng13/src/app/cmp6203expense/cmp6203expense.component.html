@@ -1,0 +1,195 @@
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203a">
+          6203a cmp6203expense component added: interpolation (title3).
+        </a>
+      </div>
+      <div id="6203a" class="collapse">
+        <div class="card-body">   
+          <p>{{title3}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203b">
+          6203b cmp6203expense event binding.
+        </a>
+      </div>
+      <div id="6203b" class="collapse">
+        <div class="card-body">    
+          <button (click)="showData($event)">Click here</button>   
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203c">
+          6203c cmp6203expense componentProperty-DOMattribute binding: userName property is bind to an attribute of a DOM element 
+          input tag.
+        </a>
+      </div>
+      <div id="6203c" class="collapse">
+        <div class="card-body">
+          <input type="text" [value]="userNameC">         
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203d">
+          6203d cmp6203expense class binding.
+        </a>
+      </div>
+      <div id="6203d" class="collapse">
+        <div class="card-body">
+          <p [class]="myCSSClass">This paragraph class comes from *myClass* property </p> 
+          <p [class.blue]="applyCSSClass">This paragraph class does not apply</p>       
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203e">
+          6203e cmp6203expense style binding.
+        </a>
+      </div>
+      <div id="6203e" class="collapse">
+        <div class="card-body">        
+          <p [style.color]="myColor">Text color is styled using style binding</p>       
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203f">
+          6203f cmp6203expense two-way data binding. It is the combination of property and event binding.
+        </a>
+      </div>
+      <div id="6203f" class="collapse">
+        <div class="card-body" >        
+          <input type="text" [(ngModel)]="userName" />
+
+          <p>Two way binding! Hello {{ userName }}!</p>   
+          <p style="color:red;">In a browser, open Angular app from index.html without a server: not correct way.</p>             
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203g">
+          6203g cmp6203expense ngIfElse directive.
+        </a>
+      </div>
+      <div id="6203g" class="collapse">
+        <div class="card-body">   
+    
+          <div *ngIf="isLogIn; else isLogOut"> 
+             You are logged in 
+          </div>
+          <ng-template #isLogOut> 
+             You're logged out.. 
+          </ng-template>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203h">
+          6203h cmp6203expense ngFor directive.
+        </a>
+      </div>
+      <div id="6203h" class="collapse">
+        <div class="card-body">   
+    
+          ngFor directive
+          <ul> 
+             <li *ngFor="let l of list">
+                {{l}} 
+             </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203i">
+          6203i cmp6203expense ngSwitch directive.
+        </a>
+      </div>
+      <div id="6203i" class="collapse">
+        <div class="card-body">  
+       ngSwitch directive
+   
+        <ul [ngSwitch]="logInName"> 
+          <li *ngSwitchCase="'user'"> 
+              <p>User is logged in..</p> 
+          </li> 
+          <li *ngSwitchCase="'admin'"> 
+              <p>admin is logged in</p> 
+          </li> 
+          <li *ngSwitchDefault> 
+              <p>Please choose login name</p> 
+          </li> 
+        </ul>
+
+        </div>
+      </div>
+    </div>
+
+   <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6203j">
+          6203j cmp6203expense pipes were filters.
+        </a>
+      </div>
+      <div id="6203j" class="collapse">
+        <div class="card-body">      
+          Today's date: {{presentDate}}  <br/>
+          Today's date: {{presentDate | date }}    <br/>
+          short date: {{presentDate | date:'shortDate' }} <br/>
+          Full date: {{presentDate | date:'fullDate' }} <br/> 
+          Formatted date: {{presentDate | date:'M/dd/yyyy'}} <br/> 
+          Hours and minutes: {{presentDate | date:'h:mm'}} <br/>  
+        </div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#6203k">
+          6203k cmp6203expense chained pipes.
+        </a></div>
+      <div id="6203k" class="collapse"><div class="card-body">     
+          Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
+          Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/> 
+        </div></div></div>
+
+    <div class="card"><div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#6203l">
+          6203l cmp6203expense asyncPipe.
+        </a></div>
+      <div id="6203l" class="collapse"><div class="card-body" style="color:red;">     
+        after removed async: {{ timeChange  }}
+        AsyncPipe not work;        
+        </div></div></div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#6299">
+          6299 zzzzz
+        </a>
+      </div>
+      <div id="6299" class="collapse">
+        <div class="card-body">
+          zzzzz
+        </div>
+      </div>
+    </div>   

@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#6502a">
+        6502a reactive form is also referred as model driven form.
+      </a>
+    </div>
+    <div id="6502a" class="collapse">
+      <div class="card-body">   
+
+        <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" > 
+            <input type= "text"  name="userName" placeholder="userName" formControlName = "userName"> 
+            <br/><br/>
+            <input type="submit"  value="Click here"> 
+         </form>
+
+         <p> Textbox result is: {{userName}} </p>
+
+      </div>
+    </div>
+  </div> 

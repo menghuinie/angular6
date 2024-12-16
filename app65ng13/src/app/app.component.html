@@ -1,0 +1,108 @@
+<!-- 
+Accordion
+-->
+<div class="container">  
+    <p> {{ title$ }} Angular app works 🎉</p>   
+   
+    <div id="accordion">
+      <u>app65ng13 ROOT</u>
+      <div class="card"><div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#65a">
+        65a asyncPipe.
+        </a></div>
+        <div id="65a" class="collapse"><div class="card-body">     
+          every second call function observer.next: {{ timeChange | async }}    
+        </div></div></div>
+
+      <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65b">
+            65b currencyPipe.
+          </a></div>
+        <div id="65b" class="collapse"><div class="card-body">   
+            <p>EUR{{ price | currency:'EUR':true}}</p> 
+          </div></div></div>
+  
+      <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65c">
+            65c percentPipe.
+          </a></div>
+        <div id="65c" class="collapse"><div class="card-body">   
+            <p> PercentPipe {{decimalNum | percent:'2.2'}} </p> 
+          </div></div></div>
+
+        <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65d">
+            65d slicePipe.
+          </a></div>
+        <div id="65d" class="collapse"><div class="card-body">   
+            <p>Start and end index:- {{fruits$$ | slice:1:3}}</p> 
+          </div></div></div>
+
+        <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65e">
+            65e JsonPipe.
+          </a></div>
+        <div id="65e" class="collapse"><div class="card-body">   
+            <p>{{ jsonData | json }}</p>
+          </div></div></div>
+
+        <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65f">
+            65f custom pipe.
+          </a></div>
+        <div id="65f" class="collapse"><div class="card-body">   
+          <p> digitCount pipe </p> 
+          {{ digits100 | digitcount }}
+          </div></div></div>
+
+        <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65g">
+            65g reactive programming.
+          </a></div>
+        <div id="65g" class="collapse"><div class="card-body">
+SUM of numbers ( <span *ngFor="let num of numbers"> {{ num }} </span> ) is {{ sum1 }}    <br/>       
+SUM of numbers filtered ( <span *ngFor="let num of filteredNumbers"> {{ num }} </span> ) is {{ sum2 }}  <br/>
+SUM of numbers processed ( <span *ngFor="let num of processedNumbers"> {{ num }} </span> ) is {{ sum3 }}  <br/>
+
+The response from the API is <em>{{ apiMessage }}</em> <br/>
+<p style="color:red;">
+<a id="counter" href="#">Click here</a> to increment the counter value. The current counter value is {{ counter }}   
+</p></div></div></div>
+
+        <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65h">
+            65h service and dependency injection.
+          </a></div>
+        <div id="65h" class="collapse"><div class="card-body">   
+            zzzzzzz
+          </div></div></div>
+
+          <div class="card"><div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#65z">
+            65z zzzzzz.
+          </a></div>
+        <div id="65z" class="collapse"><div class="card-body">   
+            zzzzzzz
+          </div></div></div>
+      <br/> 
+      <u>template1forms CMP</u>
+      <app-template1forms></app-template1forms>
+      <br/> 
+      <u>cmp6502reactive-form CMP</u>
+      <app-cmp6502reactive-form></app-cmp6502reactive-form>
+      <br/> 
+      <u>cmp6503reactive-form-validation CMP</u>
+      <app-cmp6503reactive-form-validation></app-cmp6503reactive-form-validation>
+
+      
+    </div>  
+  </div>
+  
+  <p><strong>Note:</strong> 
+    
+  </p>
+  
+  <ol>
+    <li>
+      zzzzzThe <strong>data999</strong> zzzzzz.
+    </li>
+  
+    <li>
+      Refer <a href="https://github.com/angular/angular" target="_blank">Angular on github</a>
+    </li>
+  
+    <li>
+      zzzzzz
+    </li>
+  </ol>  

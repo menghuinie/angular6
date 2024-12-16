@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#6503a">
+        6503a Form Validation: Required Field validation.
+      </a>
+    </div>
+    <div id="6503a" class="collapse">
+      <div class="card-body">   
+
+<form [formGroup]="requiredForm" novalidate>
+    <div class="form-group">
+        <label>Name:
+            <input class="form-control" formControlName="name">
+        </label>
+    </div>
+    <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched" class="alert alert-danger">
+        <div *ngIf="requiredForm.controls['name'].errors.required">
+            Name is required.
+        </div>
+    </div>
+</form>
+<p>Form value: {{ requiredForm.value | json }}</p>
+<p>Form status: {{ requiredForm.status | json }}</p>
+
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#6503b">
+        6503b Form Validation: PatternValidator.
+      </a>
+    </div>
+    <div id="6503b" class="collapse">
+      <div class="card-body">   
+     
+<form [formGroup]=" patternForm" novalidate>
+<div class="form-group">
+    <label class="center-block">Email:
+    <input class="form-control" formControlName="email">
+    </label>
+</div>
+<div *ngIf=" patternForm.controls['email'].invalid &&  patternForm.controls['email'].touched" class="alert alert-danger">
+    <div *ngIf=" patternForm.controls['email'].errors.required">
+    Email is required.
+    </div>
+</div>
+</form>
+<p>Form value: {{  patternForm.value | json }}</p>
+<p>Form status: {{  patternForm.status | json }}</p>
+
+      </div>
+    </div>
+  </div> 

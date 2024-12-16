@@ -1,0 +1,129 @@
+<!-- 
+ Menu
+-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Angular and Bootstrap 4</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">php3<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/php3/php3111.php" target="_blank">php3111</a></li>
+          <li><a href="/php3/php3122.php" target="_blank">php3122</a></li>
+          <li><a href="/php3/php3933.php" target="_blank">php3933</a></li>
+        </ul>
+      </li>         
+
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">python4<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+
+          <li><a href="/python4/index4111.py" target="_blank">index4111</a></li>
+          <li><a href="/python4/index4122.py" target="_blank">index4122</a></li>
+          <li><a href="http://127.0.0.1:8000" target="_blank">Django home</a></li>
+          <li><a href="http://127.0.0.1:8000/app1103a" target="_blank">django.prj1103.app1103a</a></li>             
+        </ul>
+      </li>      
+
+      <li><a href="#">Other</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- 
+Accordion
+-->
+<div class="container">  
+  <p>Your Angular app works 🎉</p>
+ 
+  <div id="accordion">
+    <u>app62ng13 AppComponent</u>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#62a">
+          62a AppComponent property (title), data binding.
+        </a>
+      </div>
+      <div id="62a" class="collapse" >
+        <div class="card-body">          
+          title== {{ title }}  
+          <br/>title is a property in AppComponent and it is bind to template using Interpolation.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><a class="collapsed card-link" data-toggle="collapse" href="#62b">
+          62b Angular HttpClient.       
+        </a>
+        <a href="{{getURL}}" target="_blank">getURL of github.com</a>  
+      </div>
+
+      <div id="62b" class="collapse"><div class="card-body">    
+ 
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>HTML Url</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let repo of repos;">
+                <td>{{repo.id}}</td>
+                <td>{{repo.name}}</td>
+                <td>{{repo.html_url}}</td>
+                <td>{{repo.description}}</td>
+              </tr>
+            </tbody>
+          </table> 
+           
+          <pre>{{repos | json}}</pre>
+
+        </div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#62c">
+          62c zzzzz
+        </a>
+      </div>
+      <div id="62c" class="collapse">
+        <div class="card-body">
+          zzzzz
+        </div>
+      </div>
+    </div>
+
+    <u>cmp6203expense</u>
+    <app-cmp6203expense></app-cmp6203expense>    
+  
+  </div>
+
+</div>
+
+
+<p><strong>Note:</strong> 
+  
+</p>
+
+<ol>
+  <li>
+    zzzzzThe <strong>data999</strong> attribzzzments.
+  </li>
+
+  <li>
+    Tea <a href="https://github.com/angular/angular" target="_blank">Angular on github</a>
+  </li>
+
+  <li>
+    zzzzzz
+  </li>
+</ol>  
+
+<router-outlet />
